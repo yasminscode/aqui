@@ -3,296 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estrela Cadente - Magical Experience 🌸</title>
+    <title>Espaço Curioso & Fofo ✨</title>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-pink: #ffafbd;
-            --secondary-pink: #ffc3a0;
-            --soft-purple: #cbb4d4;
-            --mint: #a8e6cf;
-            --vanilla: #fdffcd;
-            --text-dark: #5d4037;
+            --space-dark: #2d3436;
+            --pastel-pink: #fab1a0;
+            --pastel-blue: #74b9ff;
+            --pastel-purple: #a29bfe;
+            --star-gold: #ffeaa7;
             --white: #ffffff;
-            --card-bg: rgba(255, 255, 255, 0.85);
         }
 
-        /* Reset e Base */
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-        
+
         body {
             font-family: 'Quicksand', sans-serif;
-            background: linear-gradient(45deg, var(--primary-pink), var(--soft-purple), var(--vanilla));
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-            color: var(--text-dark);
+            background: linear-gradient(180deg, #1e272e 0%, #485460 100%);
+            color: var(--white);
             overflow-x: hidden;
+            cursor: none; /* Vamos usar um astronauta no lugar do mouse */
         }
 
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        /* Astronauta seguindo o mouse */
+        #cursor-astronaut {
+            position: fixed;
+            pointer-events: none;
+            z-index: 10000;
+            font-size: 2rem;
+            transition: transform 0.1s ease;
         }
 
-        /* Barra de Navegação Fofa */
-        nav {
-            background: var(--card-bg);
-            backdrop-filter: blur(8px);
-            padding: 15px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            border-bottom: 4px dashed var(--primary-pink);
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: 0.3s;
-        }
-
-        nav a:hover { color: var(--primary-pink); transform: scale(1.2) rotate(-5deg); }
-
-        /* Header Gigante */
         header {
-            height: 80vh;
+            height: 70vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            position: relative;
+            background: url('http://googleusercontent.com/image_generation_content/1') no-repeat center center;
+            background-size: cover;
+            border-bottom: 5px dashed var(--pastel-pink);
         }
 
-        .floating-title {
-            animation: float 4s infinite ease-in-out;
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 50px;
-            border: 5px solid var(--white);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        .hero-title {
+            background: rgba(45, 52, 54, 0.8);
+            padding: 30px;
+            border-radius: 40px;
+            backdrop-filter: blur(5px);
+            border: 3px solid var(--pastel-pink);
         }
 
-        h1 { font-family: 'Fredoka One', cursive; font-size: 4.5rem; color: #ff6b81; text-shadow: 4px 4px 0px white; }
+        h1 { font-family: 'Fredoka One', cursive; font-size: 3rem; color: var(--pastel-pink); margin-bottom: 10px; }
 
-        /* Seções do Site */
-        .section { padding: 80px 20px; max-width: 1100px; margin: 0 auto; }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
+        .container { max-width: 900px; margin: -50px auto 50px; padding: 0 20px; }
 
         .card {
-            background: var(--card-bg);
-            border-radius: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 30px;
             padding: 40px;
-            border: 3px solid var(--white);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            transition: 0.4s;
-            position: relative;
-            overflow: hidden;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            margin-bottom: 30px;
         }
 
-        .card:hover { transform: translateY(-15px); box-shadow: 0 20px 40px rgba(255, 107, 129, 0.2); }
+        h2 { font-family: 'Fredoka One'; color: var(--pastel-blue); margin-bottom: 20px; }
 
-        /* Galeria Interativa */
-        .gallery {
+        /* Simulador Interativo */
+        .simulator {
             display: flex;
-            gap: 15px;
-            overflow-x: auto;
-            padding: 20px 0;
-        }
-
-        .gallery-item {
-            min-width: 200px;
-            height: 200px;
-            background: var(--mint);
-            border-radius: 30px;
-            display: flex;
+            justify-content: space-around;
             align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            transition: 0.5s;
-            cursor: pointer;
+            background: rgba(0,0,0,0.2);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 20px 0;
+            text-align: center;
         }
 
-        .gallery-item:hover { flex: 2; transform: rotate(5deg); background: var(--secondary-pink); }
+        .clock-container { flex: 1; }
+        .clock-display { font-family: 'Fredoka One'; font-size: 2.5rem; color: var(--star-gold); }
+        .label { font-size: 0.9rem; color: var(--pastel-pink); text-transform: uppercase; font-weight: bold; }
 
-        /* Mini Game */
-        #game-area {
-            height: 300px;
-            background: var(--white);
-            border-radius: 40px;
-            position: relative;
-            margin-top: 20px;
-            border: 3px dashed var(--soft-purple);
-            overflow: hidden;
-            cursor: crosshair;
-        }
-
-        .heart-target {
-            position: absolute;
-            font-size: 2rem;
-            cursor: pointer;
-            transition: 0.2s;
-            user-select: none;
-        }
-
-        /* Botões e Inputs */
-        .btn-magical {
-            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+        .btn-magic {
+            background: var(--pastel-purple);
             border: none;
-            padding: 15px 40px;
-            border-radius: 30px;
+            padding: 15px 30px;
+            border-radius: 50px;
             color: white;
-            font-family: 'Fredoka One', cursive;
+            font-family: 'Fredoka One';
             font-size: 1.2rem;
             cursor: pointer;
-            box-shadow: 0 8px 0 #e88a8e;
-            margin: 10px;
+            box-shadow: 0 5px 0 #6c5ce7;
+            transition: 0.2s;
         }
 
-        .btn-magical:active { box-shadow: 0 0 0; transform: translateY(8px); }
+        .btn-magic:active { transform: translateY(5px); box-shadow: none; }
 
-        /* Animações */
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0); }
-            50% { transform: translateY(-20px) rotate(2deg); }
-        }
-
-        /* Rastro de Estrela */
+        /* Estrelinhas de Fundo */
         .star {
             position: absolute;
-            width: 15px;
-            height: 15px;
-            background: gold;
-            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-            pointer-events: none;
-            animation: starFade 0.8s forwards;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: twinkle var(--duration) infinite;
         }
 
-        @keyframes starFade {
-            to { opacity: 0; transform: scale(2) translateY(50px) rotate(180deg); }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
         }
 
-        footer { text-align: center; padding: 60px; font-size: 1.2rem; background: var(--white); }
+        footer { text-align: center; padding: 40px; font-weight: bold; color: var(--pastel-pink); }
     </style>
 </head>
 <body>
 
-    <nav>
-        <a href="#inicio">Início</a>
-        <a href="#sobre">Fofura Acadêmica</a>
-        <a href="#mini-game">Mini-Game</a>
-        <a href="#galeria">Galeria</a>
-    </nav>
+    <div id="cursor-astronaut">🧑‍🚀</div>
 
-    <header id="inicio">
-        <div class="floating-title">
-            <h1>Yasmin's Magical Space</h1>
-            <p>Seja bem-vinda ao meu cantinho cheio de glitter e ciência! ✨</p>
-            <br>
-            <button class="btn-magical" onclick="tocarMusica()">Clique para Magia! ✨</button>
+    <header>
+        <div class="hero-title">
+            <h1>Relógios Espaciais 🕰️</h1>
+            <p>Por que o tempo voa (literalmente) no espaço?</p>
         </div>
     </header>
 
-    <div class="section" id="sobre">
-        <div class="grid-container">
-            <div class="card">
-                <h2>☁️ Nuvem de Pensamentos</h2>
-                <p>Aqui colocamos ideias que flutuam! Sabia que o cérebro de uma pessoa feliz brilha mais em exames de imagem? (Ok, essa é uma licença poética científica!)</p>
-            </div>
-            <div class="card" style="background: var(--mint);">
-                <h2>🧸 O Fator Ursinho</h2>
-                <p>Estudos mostram que olhar para imagens de animais filhotes aumenta a concentração e o foco em tarefas detalhadas. Use isso na sua monitoria!</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="section" id="mini-game">
+    <div class="container">
         <div class="card">
-            <h2>💖 Catch the Heart!</h2>
-            <p>Tente clicar no coração que foge! Pontos: <span id="score">0</span></p>
-            <div id="game-area">
-                <div id="target" class="heart-target">💗</div>
-            </div>
+            <h2>✨ A Mágica de Einstein</h2>
+            <p>Segundo a Teoria da Relatividade, a gravidade "dobra" o tempo. Quanto mais forte a gravidade (como aqui na Terra), mais o tempo é "puxado" e passa devagar.</p>
+            <br>
+            <p>Se você vivesse em um satélite longe da Terra, você envelheceria alguns nanossegundos mais rápido do que seus amigos aqui embaixo! 🚀</p>
         </div>
-    </div>
 
-    <div class="section" id="galeria">
-        <h2>🌈 Galeria de Emojis Gigantes</h2>
-        <div class="gallery">
-            <div class="gallery-item">🌸</div>
-            <div class="gallery-item">🍭</div>
-            <div class="gallery-item">🎀</div>
-            <div class="gallery-item">🦄</div>
-            <div class="gallery-item">🎨</div>
-            <div class="gallery-item">🍦</div>
+        <div class="card">
+            <h2>🛠️ Simulador de Dilatação</h2>
+            <p>Veja a diferença em tempo real (exagerada para visualização):</p>
+            
+            <div class="simulator">
+                <div class="clock-container">
+                    <div class="label">🌍 Terra (Mais lento)</div>
+                    <div id="earth-clock" class="clock-display">00:00</div>
+                </div>
+                <div style="font-size: 2rem;">🚀</div>
+                <div class="clock-container">
+                    <div class="label">🌌 Espaço (Mais rápido)</div>
+                    <div id="space-clock" class="clock-display">00:00</div>
+                </div>
+            </div>
+            
+            <button class="btn-magic" onclick="resetClocks()">Resetar Viagem no Tempo 💫</button>
+        </div>
+
+        <div class="card">
+            <h2>🛰️ Sabia que o seu GPS usa isso?</h2>
+            <p>Os satélites de GPS estão tão longe da Terra que seus relógios internos ficam 38 microssegundos adiantados por dia. Se os computadores não corrigissem isso usando a física de Einstein, o GPS do seu celular erraria sua localização por quilômetros!</p>
         </div>
     </div>
 
     <footer>
-        <p>Criado com 💖 por Yasmin Vitórya</p>
-        <p style="font-size: 0.8rem; margin-top: 10px;">© 2026 - Onde a ciência encontra a fofura</p>
+        Criado com 💖 e Física para Yasmin
     </footer>
 
     <script>
-        // Sistema de Pontuação do Game
-        let score = 0;
-        const target = document.getElementById('target');
-        const scoreDisplay = document.getElementById('score');
-        const gameArea = document.getElementById('game-area');
-
-        function moveTarget() {
-            const maxX = gameArea.clientWidth - 50;
-            const maxY = gameArea.clientHeight - 50;
-            const randomX = Math.floor(Math.random() * maxX);
-            const randomY = Math.floor(Math.random() * maxY);
-            
-            target.style.left = randomX + 'px';
-            target.style.top = randomY + 'px';
-        }
-
-        target.addEventListener('mouseover', () => {
-            moveTarget();
-        });
-
-        target.addEventListener('click', () => {
-            score++;
-            scoreDisplay.innerText = score;
-            target.innerText = '✨';
-            setTimeout(() => { target.innerText = '💗'; }, 200);
-            moveTarget();
-        });
-
-        // Efeito de Rastro de Estrelas
+        // Seguir o mouse com o astronauta
+        const astronaut = document.getElementById('cursor-astronaut');
         document.addEventListener('mousemove', (e) => {
-            if (Math.random() > 0.8) { // Não criar tantas estrelas para não pesar
-                const star = document.createElement('div');
-                star.className = 'star';
-                star.style.left = e.pageX + 'px';
-                star.style.top = e.pageY + 'px';
-                document.body.appendChild(star);
-                setTimeout(() => star.remove(), 800);
-            }
+            astronaut.style.left = e.clientX + 'px';
+            astronaut.style.top = e.clientY + 'px';
         });
 
-        // Função do Botão de Magia
-        function tocarMusica() {
-            alert("✨ Magia Ativada! ✨\nQue seu dia seja tão brilhante quanto esse código!");
-            document.body.style.filter = "saturate(1.5)";
-            setTimeout(() => { document.body.style.filter = "none"; }, 2000);
+        // Lógica dos Relógios
+        let earthTime = 0;
+        let spaceTime = 0;
+
+        function updateClocks() {
+            earthTime += 1;
+            // No espaço o tempo passa um pouquinho mais rápido (simulado aqui como 1.5x)
+            spaceTime += 1.5; 
+
+            document.getElementById('earth-clock').innerText = formatTime(earthTime);
+            document.getElementById('space-clock').innerText = formatTime(spaceTime);
         }
 
-        moveTarget(); // Inicializar posição do coração
+        function formatTime(ms) {
+            let totalSeconds = Math.floor(ms / 10);
+            let seconds = totalSeconds % 60;
+            let minutes = Math.floor(totalSeconds / 60);
+            return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        function resetClocks() {
+            earthTime = 0;
+            spaceTime = 0;
+            alert("Voltamos para o mesmo ponto no tempo! ✨");
+        }
+
+        setInterval(updateClocks, 100);
+
+        // Gerar estrelas de fundo
+        for (let i = 0; i < 50; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            const size = Math.random() * 3 + 'px';
+            star.style.width = size;
+            star.style.height = size;
+            star.style.left = Math.random() * 100 + 'vw';
+            star.style.top = Math.random() * 100 + 'vh';
+            star.style.setProperty('--duration', Math.random() * 3 + 1 + 's');
+            document.body.appendChild(star);
+        }
     </script>
 </body>
 </html>
