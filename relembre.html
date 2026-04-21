@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Relembre AS • Gestação & Puericultura</title>
-  <meta name="description" content="Área de revisão guiada com os 16 tópicos de gestação, neonatologia, puericultura e adolescência explicados de forma didática." />
+  <meta name="description" content="Revisão direta dos 16 tópicos de AS, com seleção por tema e explicação objetiva." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
@@ -18,30 +18,18 @@
   <header class="hero hero-small">
     <div class="hero-text">
       <span class="eyebrow">📚 relembre</span>
-      <h1>Área de estudo de AS<br><span>16 tópicos explicados de verdade</span></h1>
+      <h1>Relembre os 16 tópicos<br><span>Escolha um tema e revise o essencial</span></h1>
       <p>
-        Aqui é a parte para <strong>aprender mesmo</strong>. Você escolhe um dos 16 temas e revisa os fundamentos,
-        o que precisa saber, as conexões clínicas e por que aquele assunto importa.
+        Aqui fica só a parte de revisão: você escolhe um dos 16 tópicos e lê a explicação correspondente,
+        de forma direta, educativa e sem excesso de coisa na tela.
       </p>
       <div class="hero-actions">
         <a class="btn primary" href="index.html">Voltar ao checklist</a>
         <a class="btn secondary" href="questoes.html">Ir para as questões</a>
       </div>
-      <div class="stats">
-        <div class="stat-card">
-          <span class="stat-label">temas explicados</span>
-          <strong id="studyTopicCount">16</strong>
-        </div>
-        <div class="stat-card">
-          <span class="stat-label">tema atual</span>
-          <strong id="studyCurrentCount">1/16</strong>
-        </div>
-      </div>
     </div>
     <div class="hero-art">
       <img src="assets/hero-mother-baby.svg" alt="Ilustração delicada de maternidade" />
-      <div class="floating-card card-a">🌷 fundamentos + importância</div>
-      <div class="floating-card card-b">🧠 explicação didática</div>
     </div>
   </header>
 
@@ -51,66 +39,18 @@
         <h2>Escolha o tópico</h2>
         <nav id="studyToc" class="topic-selector"></nav>
       </div>
-      <div class="sidebar-box soft">
-        <h2>Como usar</h2>
-        <p>
-          Leia um tópico por vez, depois volta ao checklist para marcar o que revisou e finaliza com as questões.
-          Fica um combo ótimo: <strong>entender → revisar → treinar</strong>.
-        </p>
-      </div>
     </aside>
 
     <section class="content">
-      <section class="intro-cards">
-        <article class="mini-card">
-          <span>🌸</span>
-          <h3>Didático</h3>
-          <p>Explicação em linguagem clara, mas sem perder o raciocínio médico.</p>
-        </article>
-        <article class="mini-card">
-          <span>🧩</span>
-          <h3>Integrado</h3>
-          <p>Mostra a relação entre fisiologia, clínica e pediatria.</p>
-        </article>
-        <article class="mini-card">
-          <span>✨</span>
-          <h3>Essencial</h3>
-          <p>Foco no que realmente precisa saber para a prova e para entender o tema.</p>
-        </article>
-      </section>
-
       <section class="study-card">
         <div class="study-topic-head">
           <div>
-            <p class="study-kicker" id="studyIconLine">🤰 tópico selecionado</p>
+            <p class="study-kicker" id="studyIconLine">📌 tópico selecionado</p>
             <h2 id="studyTitle">Carregando tema...</h2>
-            <p id="studySubtitle"></p>
-          </div>
-          <div class="study-mini-badges">
-            <span id="studyBadgeA">Fundamentos</span>
-            <span id="studyBadgeB">Pontos-chave</span>
           </div>
         </div>
 
-        <section class="study-block">
-          <h3>🧠 Entenda o núcleo do tema</h3>
-          <div id="studyFundamentos"></div>
-        </section>
-
-        <section class="study-block">
-          <h3>✅ O que você precisa saber</h3>
-          <ul id="studyEssenciais" class="study-key-list"></ul>
-        </section>
-
-        <section class="study-block study-importance">
-          <h3>🌟 Por que isso importa</h3>
-          <p id="studyImportancia"></p>
-        </section>
-
-        <section class="study-note">
-          <h3>🔗 Conexão esperta</h3>
-          <p id="studyConexao"></p>
-        </section>
+        <div id="studyContent" class="study-simple-content"></div>
 
         <div class="study-actions">
           <button id="studyPrev" class="btn ghost" type="button">← tópico anterior</button>
@@ -121,7 +61,7 @@
   </main>
 
   <footer class="footer">
-    <p>Área Relembre • revisão guiada dos 16 tópicos de AS 💕</p>
+    <p>Área Relembre • revisão direta dos 16 tópicos 💕</p>
   </footer>
 
   <script src="relembre-data.js"></script>

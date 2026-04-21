@@ -444,3 +444,15 @@ a.btn{ text-decoration:none; display:inline-flex; align-items:center; justify-co
 .study-note p{margin:0; line-height:1.6}
 .study-actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
 @media (max-width: 1024px){.study-layout{grid-template-columns:1fr}}
+
+
+.study-simple-content h3 {
+  margin-top: 1.2rem;
+  margin-bottom: .45rem;
+  font-size: 1.05rem;
+  color: var(--text-dark);
+}
+.study-simple-content p {
+  margin: 0 0 .7rem;
+  line-height: 1.7;
+}
