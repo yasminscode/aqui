@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relembre AS • Gestação & Puericultura</title>
+  <meta name="description" content="Revisão direta dos 16 tópicos de AS, com seleção por tema e explicação objetiva." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="questions-page">
+  <div class="bg-orbs orb-1"></div>
+  <div class="bg-orbs orb-2"></div>
+  <div class="bg-orbs orb-3"></div>
+
+  <header class="hero hero-small">
+    <div class="hero-text">
+      <span class="eyebrow">📚 relembre</span>
+      <h1>Relembre os 16 tópicos<br><span>Escolha um tema e revise o essencial</span></h1>
+      <p>
+        Aqui fica só a parte de revisão: você escolhe um dos 16 tópicos e lê a explicação correspondente,
+        de forma direta, educativa e sem excesso de coisa na tela.
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary" href="index.html">Voltar ao checklist</a>
+        <a class="btn secondary" href="questoes.html">Ir para as questões</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img src="assets/hero-mother-baby.svg" alt="Ilustração delicada de maternidade" />
+    </div>
+  </header>
+
+  <main class="main-layout">
+    <aside class="sidebar">
+      <div class="sidebar-box">
+        <h2>Escolha o tópico</h2>
+        <nav id="studyToc" class="topic-selector"></nav>
+      </div>
+    </aside>
+
+    <section class="content">
+      <section class="study-card">
+        <div class="study-topic-head">
+          <div>
+            <p class="study-kicker" id="studyIconLine">📌 tópico selecionado</p>
+            <h2 id="studyTitle">Carregando tema...</h2>
+          </div>
+        </div>
+
+        <div id="studyContent" class="study-simple-content"></div>
+
+        <div class="study-actions">
+          <button id="studyPrev" class="btn ghost" type="button">← tópico anterior</button>
+          <button id="studyNext" class="btn primary" type="button">Próximo tópico →</button>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Área Relembre • revisão direta dos 16 tópicos 💕</p>
+  </footer>
+
+  <script src="relembre-data.js"></script>
+  <script src="relembre.js"></script>
+</body>
+</html>
