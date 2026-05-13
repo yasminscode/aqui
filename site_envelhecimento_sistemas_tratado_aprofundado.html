@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Envelhecimento dos Sistemas — Tratado de Geriatria e Gerontologia</title>
+<style>
+:root{
+  --bg:#f5f7fb; --ink:#1d2433; --muted:#5d687c; --brand:#2b5b84; --brand2:#7a3e5d; --card:#ffffff; --line:#d9e1ec; --soft:#eaf1f8; --warn:#fff4df; --bad:#ffe8e8; --ok:#eaf7ef; --deep:#12263a;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;line-height:1.62}
+a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
+.top{background:linear-gradient(135deg,#12263a,#2b5b84 60%,#7a3e5d);color:white;padding:46px 28px 38px;margin-left:300px}
+.top h1{margin:0 0 12px;font-size:2.4rem;line-height:1.1}.top p{max-width:950px;margin:10px 0;color:#e7eef7;font-size:1.05rem}.tag{display:inline-block;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:6px 12px;margin:6px 6px 0 0;color:#fff;background:rgba(255,255,255,.12)}
+.sidebar{position:fixed;top:0;left:0;bottom:0;width:300px;background:#fff;border-right:1px solid var(--line);padding:22px 18px;overflow:auto;z-index:4}.sidebar h2{font-size:1.05rem;margin:0 0 12px;color:var(--deep)}.sidebar small{display:block;color:var(--muted);margin-bottom:14px}.nav a{display:block;padding:9px 10px;border-radius:10px;color:#243447;font-weight:650;font-size:.93rem}.nav a:hover{background:var(--soft);text-decoration:none}.nav .sub{font-weight:500;color:var(--muted);padding-left:22px;font-size:.88rem}.actions{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.btn{border:0;border-radius:10px;background:var(--brand);color:white;padding:9px 11px;font-weight:700;cursor:pointer}.btn.secondary{background:#e7edf5;color:#243447}.search{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:12px;margin:8px 0 12px}
+main{margin-left:300px;padding:28px;max-width:1200px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;margin:0 0 22px;box-shadow:0 8px 24px rgba(18,38,58,.05)}.card h2{margin-top:0;color:var(--deep);font-size:1.65rem}.card h3{color:var(--brand);margin-top:24px}.lead{font-size:1.04rem;color:#2d3b4d}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.box{border-radius:14px;padding:15px;border:1px solid var(--line);background:#fbfdff}.box h4{margin:0 0 7px;color:var(--deep)}.flow{background:#f7fbff;border-left:5px solid var(--brand);padding:14px 18px;border-radius:12px;margin:14px 0;font-weight:650}.alert{background:var(--bad);border-left:5px solid #b04444;padding:14px 18px;border-radius:12px;margin:14px 0}.ok{background:var(--ok);border-left:5px solid #3a8752;padding:14px 18px;border-radius:12px;margin:14px 0}.warn{background:var(--warn);border-left:5px solid #bc7a00;padding:14px 18px;border-radius:12px;margin:14px 0}table{width:100%;border-collapse:collapse;margin:14px 0;background:white;border-radius:12px;overflow:hidden}th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}th{background:#eaf1f8;text-align:left;color:#12263a}.pill{display:inline-block;padding:3px 8px;border-radius:999px;background:#edf4fb;color:#244e72;font-size:.84rem;font-weight:700}.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}.quote{font-size:.92rem;color:var(--muted);border-top:1px dashed var(--line);margin-top:16px;padding-top:12px}.hidden{display:none!important}.footer{margin-left:300px;padding:20px 28px 44px;color:var(--muted)}
+@media(max-width:900px){.sidebar{position:relative;width:100%;height:auto}.top,main,.footer{margin-left:0}.grid,.two{grid-template-columns:1fr}.top h1{font-size:1.8rem}}
+@media print{.sidebar,.actions,.search{display:none}.top,main,.footer{margin-left:0}.card{break-inside:avoid;box-shadow:none}.top{background:white;color:black;border-bottom:2px solid #000}.top p,.tag{color:black;border-color:#777;background:white}}
+</style>
+</head>
+<body>
+<aside class="sidebar">
+  <h2>Guia de estudo</h2>
+  <small>Alterações sistêmicas no envelhecimento — baseado no <strong>Tratado de Geriatria e Gerontologia</strong>.</small>
+  <input class="search" id="search" placeholder="Buscar no site: delirium, rim, osteoartrose..." />
+  <div class="actions"><button class="btn" onclick="window.print()">Imprimir/PDF</button><button class="btn secondary" onclick="expandAll()">Abrir tudo</button></div>
+  <nav class="nav">
+    <a href="#intro">Como ler</a>
+    <a href="#nervoso">Sistema nervoso</a>
+    <a href="#cardio">Cardiovascular</a>
+    <a href="#resp">Respiratório</a>
+    <a href="#renal">Renal e urinário</a>
+    <a href="#digestorio">Digestório</a>
+    <a href="#endo">Endócrino-metabólico</a>
+    <a href="#musculo">Musculoesquelético</a>
+    <a class="sub" href="#osteoartrose">Osteoartrose</a>
+    <a href="#pele">Pele e tegumento</a>
+    <a href="#sentidos">Órgãos dos sentidos</a>
+    <a href="#imune">Imune/hematológico</a>
+    <a href="#reprodutor">Reprodutor/geniturinário</a>
+    <a href="#farmacos">Fármacos e iatrogenia</a>
+    <a href="#resumo">Mapa mental final</a>
+  </nav>
+</aside>
+<header class="top">
+  <h1>Alterações dos sistemas no envelhecimento</h1>
+  <p>Material técnico para estudante de medicina: o que muda pela senescência, qual mecanismo explica a alteração, como reconhecer na clínica e o que empurra o idoso para o lado patológico.</p>
+  <span class="tag">Senescência × Senilidade</span><span class="tag">Reserva funcional</span><span class="tag">Exames e conduta</span><span class="tag">Base: Tratado de Geriatria e Gerontologia</span>
+</header>
+<main>
+<section class="card searchable" id="intro">
+<h2>1. A lógica geriátrica: não é “órgão velho”, é menor reserva funcional</h2>
+<p class="lead">No Tratado, a ideia que atravessa os capítulos de envelhecimento dos sistemas é que muitas estruturas mudam com a idade mesmo sem doença: o vaso fica mais rígido, o ventrículo relaxa pior, o pulmão perde elasticidade, o rim filtra menos, o cérebro processa mais lentamente e a musculatura perde força. O ponto clínico não é decorar alterações isoladas; é entender que o organismo idoso funciona com menor margem de segurança.</p>
+<p>Essa menor margem é chamada de <strong>redução da reserva funcional</strong>. Reserva funcional é a capacidade de aumentar desempenho diante de estresse. Um adulto jovem compensa febre, anemia, desidratação, infecção ou cirurgia com maior facilidade. O idoso pode manter exames e sintomas aparentemente estáveis em repouso, mas descompensar quando surge uma demanda. Por isso, em geriatria, uma pneumonia pode aparecer como queda, delirium ou inapetência; uma desidratação discreta pode gerar lesão renal aguda; e um benzodiazepínico “fraco” pode causar confusão e fratura.</p>
+<div class="flow">Senescência = mudança esperada + autonomia preservada.<br>Patologia = mudança intensa, progressiva, sintomática, com perda funcional, lesão de órgão-alvo ou descompensação aguda.</div>
+<div class="two"><div class="ok"><strong>Fisiológico:</strong> lentificação leve, menor tolerância ao esforço, sono mais fragmentado, marcha cautelosa, leve redução de filtração renal, pele mais fina. O idoso adapta a rotina e mantém independência.</div><div class="alert"><strong>Patológico:</strong> queda recorrente, síncope, dispneia desproporcional, delirium, perda de AIVD/ABVD, dor persistente, sangramento, perda ponderal, insuficiência cardíaca, DRC progressiva, demência, fratura.</div></div>
+</section>
+
+<section class="card searchable" id="nervoso">
+<h2>2. Sistema nervoso</h2>
+<p>O envelhecimento do sistema nervoso não significa “perder neurônios de forma difusa até ficar demente”. O Tratado destaca que a diferença de tamanho cerebral entre adulto e idoso tem significado funcional limitado e que a perda neuronal é seletiva, não uniforme. O que pesa clinicamente é a combinação entre alterações estruturais, bioquímicas e funcionais: discreta redução de massa/volume em algumas áreas, alterações de substância branca, gliose como resposta ao dano, menor metabolismo em certos circuitos e mudanças em neurotransmissores. Além disso, a barreira hematoencefálica pode se tornar mais permeável, o que ajuda a explicar maior sensibilidade a substâncias e fármacos.</p>
+<p>A principal manifestação fisiológica é a <strong>lentificação do processamento</strong>. Tecnicamente, isso envolve menor velocidade para integrar estímulos, selecionar respostas, alternar tarefas e sustentar atenção. Clinicamente, o idoso pode demorar mais para responder, aprender melhor com repetição e ter pior desempenho sob dupla tarefa, por exemplo caminhar e conversar ao mesmo tempo. Isso é diferente de demência: na senescência a autonomia se mantém; na demência há declínio progressivo com prejuízo funcional.</p>
+<p>A memória também sofre mudança específica. A memória episódica, ligada a eventos recentes, tende a ter queda mais evidente; já memórias semântica, procedural e implícita são mais preservadas. O idoso pode esquecer um nome e lembrar depois com pista. Isso é falha de evocação. Fica patológico quando a pessoa não registra ou não recupera mesmo com pistas, repete perguntas, perde-se em locais conhecidos, erra medicações e perde capacidade de manejar finanças ou rotina.</p>
+<div class="warn"><strong>Delirium nunca é senescência.</strong> Confusão aguda, flutuante, com desatenção, sonolência ou agitação, deve ser tratada como disfunção cerebral aguda até prova em contrário. Procurar infecção, hipóxia, distúrbios metabólicos, dor, retenção urinária, constipação, privação de sono e fármacos.</div>
+<h3>Como reconhecer e investigar</h3>
+<p>A avaliação começa por anamnese com informante, porque o paciente pode subestimar sintomas. Investigue AIVD: dinheiro, compras, telefone, remédios, transporte e preparo de refeições. Depois avalie ABVD: banho, vestir-se, continência, transferência e alimentação. Use triagem cognitiva com Mini-Cog, MEEM ou MoCA; o MoCA costuma ser mais sensível para função executiva. Em delirium, use método clínico baseado em início agudo, curso flutuante, desatenção e alteração do nível de consciência. Para marcha e quedas, observar levantar da cadeira, iniciar marcha, virar, comprimento do passo, base de sustentação e estabilidade; Timed Up and Go ajuda.</p>
+<h3>Quando vai para o patológico</h3>
+<p>O limite é cruzado quando há perda funcional, progressão, início agudo ou sinais neurológicos focais. Demência, depressão, delirium, parkinsonismo, AVC, hidrocefalia de pressão normal, neuropatias, deficiência de B12, hipotireoidismo, uso de sedativos e anticolinérgicos entram no diagnóstico diferencial. Exames úteis dependem do quadro: hemograma, eletrólitos, cálcio, glicemia, função renal/hepática, TSH, vitamina B12, urina, ECG e neuroimagem quando há início recente, sinais focais, trauma, cefaleia, anticoagulação ou evolução atípica.</p>
+</section>
+
+<section class="card searchable" id="cardio">
+<h2>3. Sistema cardiovascular</h2>
+<p>O Tratado descreve o coração idoso como competente em repouso, mas com resposta ao esforço comprometida. Isso é fundamental: fração de ejeção e débito cardíaco em repouso podem permanecer preservados, mas a capacidade de adaptação cai por três mecanismos principais: menor resposta beta-adrenérgica, pior enchimento diastólico do ventrículo esquerdo e aumento da pós-carga pela rigidez arterial.</p>
+<p>Nos vasos, ocorre aumento de colágeno, fragmentação/perda funcional da elastina e espessamento da parede arterial. A aorta fica menos complacente. Complacência é a capacidade de distender quando recebe o volume sistólico. Se a artéria endurece, a pressão sistólica aumenta, a pressão diastólica pode ficar igual ou menor e a pressão de pulso aumenta. Isso explica a hipertensão sistólica isolada, comum após os 70 anos, e associada a maior risco cardiovascular e cerebrovascular.</p>
+<p>No miocárdio, há redução do número de miócitos, aumento do volume dos remanescentes, alteração do colágeno, aumento da espessura/massa do ventrículo esquerdo e aumento do átrio esquerdo. A consequência é pior relaxamento diastólico. O ventrículo contrai relativamente bem, mas enche pior. Por isso, o idoso depende mais da contração atrial para completar o enchimento ventricular; quando surge fibrilação atrial, perde o “chute atrial” e pode evoluir com dispneia e insuficiência cardíaca, mesmo com fração de ejeção preservada.</p>
+<p>As valvas, especialmente aórtica e mitral, podem sofrer espessamento, fibrose e calcificação. Isso pode ser apenas achado de ausculta ou ecocardiograma, mas torna-se patológico quando gera estenose, insuficiência, hipertrofia, síncope, angina ou insuficiência cardíaca. O sistema de condução também envelhece por fibrose e perda celular, aumentando risco de doença do nó sinusal, bloqueios e arritmias, especialmente fibrilação atrial.</p>
+<h3>Exames e conduta</h3>
+<p>Na consulta, medir PA corretamente, inclusive em ortostatismo quando há queda, tontura ou síncope. Solicitar ECG como exame básico em sintomas cardiovasculares, hipertensão, síncope, palpitação ou avaliação pré-operatória. Ecocardiograma é indicado diante de sopro significativo, dispneia, suspeita de insuficiência cardíaca, alteração estrutural ou arritmia. Holter é útil para palpitações, síncope ou bradicardia intermitente. BNP/NT-proBNP pode ajudar em dispneia quando há dúvida de insuficiência cardíaca.</p>
+<div class="alert"><strong>Patológico quando:</strong> PA sustentadamente elevada, hipotensão ortostática sintomática, síncope, angina, dispneia ao esforço desproporcional, edema, fibrilação atrial, bloqueio avançado, sopro com sintomas ou lesão de órgão-alvo.</div>
+<p>A conduta é controlar fatores de risco sem agressividade iatrogênica: tratar hipertensão, diabetes e dislipidemia conforme risco global, estimular atividade física, reduzir sal quando apropriado, revisar medicamentos que causam hipotensão ou bradicardia, anticoagular fibrilação atrial quando indicado e investigar insuficiência cardíaca. No idoso, tratar bem não é “tratar pouco”; é tratar com meta realista e monitorar efeitos adversos.</p>
+</section>
+
+<section class="card searchable" id="resp">
+<h2>4. Sistema respiratório</h2>
+<p>O envelhecimento respiratório envolve pulmão, caixa torácica, músculos respiratórios e mecanismos de defesa. O Tratado descreve menor força muscular, tosse menos eficiente, diminuição da retração elástica pulmonar, aumento do volume residual e queda gradual da PaO₂. Em linguagem clínica: o idoso ventila e oxigena razoavelmente em repouso, mas tem menor reserva para pneumonia, broncoaspiração, insuficiência cardíaca, cirurgia e imobilidade.</p>
+<p>A perda de elasticidade reduz o recolhimento elástico do pulmão. Isso favorece aprisionamento aéreo, aumento do volume residual e fechamento precoce de pequenas vias aéreas. A caixa torácica fica mais rígida por alterações costovertebrais, cifose e calcificações, aumentando o trabalho respiratório. A tosse perde eficiência porque depende de inspiração profunda, fechamento glótico, força expiratória e coordenação; quando falha, acumula secreção e aumenta risco de atelectasia e pneumonia.</p>
+<h3>Como diferenciar senescência de doença</h3>
+<p>É esperado haver menor tolerância ao esforço intenso e pequena redução da reserva ventilatória. Não é esperado saturação baixa persistente, dispneia progressiva, sibilância recorrente, tosse crônica produtiva, hemoptise, perda ponderal, dor torácica pleurítica ou exacerbações frequentes. Esses achados exigem investigação de DPOC, asma, insuficiência cardíaca, pneumonia, neoplasia, doença intersticial, tromboembolismo ou aspiração.</p>
+<h3>Exames e conduta</h3>
+<p>A avaliação inclui oximetria, ausculta, frequência respiratória e análise funcional. Radiografia de tórax é útil em tosse persistente, febre, queda de saturação, dor torácica ou suspeita de congestão/pneumonia. Espirometria confirma obstrução e ajuda a diferenciar DPOC/asma de dispneia por descondicionamento ou cardiopatia. Gasometria arterial é indicada em hipoxemia relevante, suspeita de retenção de CO₂ ou insuficiência respiratória. Tomografia é reservada para suspeita de doença intersticial, neoplasia, bronquiectasias ou achados radiográficos não esclarecidos.</p>
+<p>A conduta médica é prevenir e preservar reserva: vacinação influenza, pneumocócica e outras indicadas; cessação do tabagismo; exercício físico e fisioterapia respiratória quando houver limitação; tratar DPOC/asma com broncodilatadores conforme diagnóstico; avaliar disfagia e risco de aspiração; evitar sedativos desnecessários que deprimem respiração e tosse. Em insuficiência respiratória, monitorar saturação e CO₂; ventilação não invasiva pode evitar intubação em cenários selecionados, mas não se deve atrasar suporte quando há fadiga muscular.</p>
+</section>
+
+<section class="card searchable" id="renal">
+<h2>5. Sistema renal e urinário</h2>
+<p>O rim envelhece de modo estrutural e funcional. O Tratado descreve que a partir da quarta década há redução do peso renal, perda de estruturas corticais, nefroangioesclerose, hialinização glomerular, diminuição do fluxo plasmático renal e redução do ritmo de filtração glomerular. A medula é relativamente mais preservada que o córtex. Na prática, o rim do idoso pode manter homeostase em repouso, mas responde pior a desidratação, contraste, anti-inflamatórios, sepse e fármacos nefrotóxicos.</p>
+<p>Nos vasos renais, ocorre esclerose progressiva e redução da luz vascular, com perda de elasticidade e alteração do fluxo. Nos glomérulos, há redução de número e área de filtração, espessamento de membrana basal e esclerose heterogênea. Túbulos e interstício sofrem atrofia e substituição por tecido conectivo. Isso reduz a capacidade de concentrar e diluir urina, excretar ácido, conservar sódio em situações de hipovolemia e eliminar medicamentos.</p>
+<p>Um erro clássico é olhar apenas a creatinina. Como o idoso tem menos massa muscular, pode ter creatinina “normal” apesar de filtração reduzida. Por isso, calcular eTFG ou clearance estimado é obrigatório antes de prescrever antibióticos, anticoagulantes, digoxina, metformina, gabapentinoides, opioides e muitos outros.</p>
+<h3>Quando é patológico</h3>
+<p>Redução leve e estável da eTFG pode acompanhar o envelhecimento, mas albuminúria persistente, hematúria, queda progressiva da filtração, distúrbios hidroeletrolíticos, acidose, anemia renal, doença mineral óssea ou lesão renal aguda não são “idade”. Incontinência urinária também não deve ser banalizada: pode envolver hiperatividade detrusora, déficit cognitivo, mobilidade reduzida, infecção, constipação, fármacos, diabetes, doença prostática ou atrofia urogenital.</p>
+<h3>Exames e conduta</h3>
+<p>Solicite creatinina com eTFG, ureia, eletrólitos, urina tipo 1, relação albumina/creatinina urinária quando houver diabetes, hipertensão ou DRC, e ultrassom de rins/vias urinárias quando houver retenção, hematúria, infecção recorrente, suspeita de obstrução, litíase ou assimetria renal. Em sintomas urinários, avaliar resíduo pós-miccional, toque retal quando indicado, diário miccional e revisão medicamentosa.</p>
+<p>A conduta é evitar nefrotoxinas, ajustar doses à função renal, hidratar de forma individualizada, controlar pressão e diabetes, tratar obstrução, manejar incontinência com medidas comportamentais antes de anticolinérgicos e monitorar potássio/sódio. Em idoso, AINE é aquele “amigo” que parece resolver dor, mas chega com lesão renal, sangramento e hipertensão no pacote.</p>
+</section>
+
+<section class="card searchable" id="digestorio">
+<h2>6. Sistema digestório</h2>
+<p>O Tratado descreve que o aparelho digestório envelhece com alterações estruturais, de motilidade e secreção, variando por segmento. A maioria é discreta em indivíduos saudáveis, mas tem grande relevância quando se soma a fármacos, comorbidades, imobilidade e desnutrição.</p>
+<p>No esôfago, a musculatura lisa muda pouco, mas há redução progressiva da inervação intrínseca. Isso pode gerar alterações de motilidade chamadas historicamente de presbiesôfago: contrações menos coordenadas, relaxamento menos sincrônico e depuração mais lenta de material deglutido ou refluído. O ponto do Tratado é importantíssimo: como essas alterações são frequentes e muitas vezes assintomáticas, disfagia nunca deve ser atribuída automaticamente à idade. Disfagia em idoso exige investigação.</p>
+<p>No estômago, pode haver alteração de motilidade, maior saciedade precoce e impacto sobre apetite. Redução de acidez não deve ser considerada universal em idoso saudável; quando há hipocloridria importante, pensar em gastrite atrófica, H. pylori ou uso crônico de inibidor de bomba. No intestino, constipação é comum, mas geralmente é multifatorial: baixa ingestão hídrica/fibras, imobilidade, opioides, anticolinérgicos, bloqueadores de cálcio, depressão, hipotireoidismo, doença neurológica e obstrução. No fígado, massa e fluxo hepático podem reduzir, alterando metabolismo de fármacos de alta extração hepática.</p>
+<h3>Quando é patológico</h3>
+<p>São sinais de alarme: disfagia progressiva, odinofagia, perda ponderal, anemia ferropriva, sangramento digestivo, vômitos persistentes, alteração recente do hábito intestinal, constipação de início novo, dor abdominal persistente, icterícia e massa abdominal. Esses sinais exigem investigação para neoplasia, estenose, doença péptica, doença inflamatória, obstrução, isquemia mesentérica ou efeitos medicamentosos.</p>
+<h3>Exames e conduta</h3>
+<p>Disfagia pede avaliação dirigida: endoscopia digestiva alta, videodeglutograma quando suspeita orofaríngea, manometria em casos selecionados. Anemia ferropriva ou sangramento oculto em idoso geralmente indica colonoscopia e/ou endoscopia conforme quadro. Constipação deve ser avaliada com história medicamentosa, exame abdominal e toque retal; colonoscopia se houver alarme. Conduta: revisar fármacos constipantes, aumentar fibra e água se seguro, estimular mobilidade, tratar causa secundária, usar laxativos osmóticos quando necessário, manejar refluxo com medidas posturais e IBP por indicação clara, evitando uso eterno sem revisão.</p>
+</section>
+
+<section class="card searchable" id="endo">
+<h2>7. Sistema endócrino-metabólico</h2>
+<p>O Tratado apresenta o envelhecimento endócrino como parte de uma teoria neuroendócrina do envelhecimento: eixos hormonais sofrem declínio de secreção, alteração de pulsatilidade e mudança de resposta tecidual. Porém, ele também chama atenção para uma armadilha: valores “anormais” podem refletir envelhecimento, doença, fármacos ou comorbidades. Então, interpretar hormônio em idoso exige contexto clínico, não caça ao número perfeito.</p>
+<p>Há declínio da secreção espontânea de GH e IGF-1, redução de esteroides sexuais, maior resistência insulínica, alteração na composição corporal com aumento relativo de gordura e redução de massa muscular, além de maior prevalência de diabetes tipo 2. No eixo tireoidiano, sintomas de hipo/hipertireoidismo podem ser oligosintomáticos ou atípicos: hipertireoidismo pode aparecer como perda de peso, fibrilação atrial e fraqueza, sem tremor exuberante; hipotireoidismo pode parecer depressão, lentificação e constipação.</p>
+<p>A deficiência de vitamina D e alterações no eixo cálcio-paratormônio são relevantes porque conectam sistema endócrino, rim, osso e músculo. Com menor síntese cutânea, menor exposição solar, menor ativação renal e ingestão inadequada, o idoso fica vulnerável a osteopenia, osteoporose, quedas e fraqueza muscular.</p>
+<h3>Quando é patológico</h3>
+<p>É patológico quando há síndrome clínica e dano funcional: diabetes com hipoglicemias, perda ponderal, sarcopenia, fraturas, osteoporose, hipotireoidismo sintomático, hipertireoidismo com arritmia, hiponatremia, insuficiência adrenal ou hipogonadismo com repercussão relevante. Não se deve repor GH ou testosterona apenas porque “caiu com a idade”; precisa indicação clara, avaliação de risco e benefício.</p>
+<h3>Exames e conduta</h3>
+<p>Exames frequentes incluem glicemia de jejum, HbA1c, perfil lipídico, TSH com T4 livre quando indicado, cálcio, fósforo, vitamina D, PTH em contextos específicos, função renal e densitometria óssea em rastreio de osteoporose conforme idade e risco. Conduta: individualizar metas glicêmicas, evitar hipoglicemia, tratar tireoide com cuidado de dose, corrigir vitamina D quando deficiente, estimular treino resistido, dieta proteica adequada, prevenção de quedas e revisão de medicamentos que alteram metabolismo.</p>
+</section>
+
+<section class="card searchable" id="musculo">
+<h2>8. Sistema musculoesquelético</h2>
+<p>O Tratado é muito claro ao colocar o tecido ósseo como sistema dinâmico, em remodelação contínua entre formação pelos osteoblastos e reabsorção pelos osteoclastos. Depois do pico de massa óssea, ocorre perda progressiva, chamada por alguns de osteopenia fisiológica. Essa perda não é homogênea: osso trabecular e cortical têm ritmos diferentes; na mulher, a queda estrogênica acelera reabsorção óssea; no idoso, deficiência de vitamina D, menor ativação renal, menor ingestão de cálcio/proteína e sedentarismo agravam o processo.</p>
+<p>No músculo, ocorre sarcopenia: redução de massa, força e desempenho muscular. O Tratado ressalta que a musculatura esquelética do velho produz menos força, contrai e relaxa mais lentamente e fadiga mais. A perda de força na cintura pélvica e extensores do quadril dificulta levantar da cadeira e impulsionar a marcha. A boa notícia: parte disso é reversível ou minimizável com condicionamento físico, principalmente exercício resistido.</p>
+<h3>Quando é patológico</h3>
+<p>Osteopenia vira problema clínico quando evolui para osteoporose com alto risco de fratura. Sarcopenia vira patológica quando causa perda de velocidade de marcha, quedas, incapacidade de levantar da cadeira, fragilidade e dependência. Dor persistente, rigidez prolongada, edema articular, deformidade, fraturas por baixo impacto e limitação funcional não devem ser atribuídos simplesmente à idade.</p>
+<h3>Exames e conduta</h3>
+<p>Densitometria óssea avalia massa óssea; FRAX estima risco de fratura; radiografia é indicada em dor, trauma, deformidade ou suspeita de fratura. Para sarcopenia, medir força de preensão, velocidade de marcha, teste de levantar da cadeira e circunferência de panturrilha pode ajudar. Conduta: exercício resistido e equilíbrio, proteína adequada, vitamina D/cálcio quando indicados, tratar osteoporose com bisfosfonatos ou outros conforme risco, corrigir visão/calçados/ambiente para prevenir quedas e revisar sedativos.</p>
+</section>
+
+<section class="card searchable" id="osteoartrose">
+<h2>9. Osteoartrose / Osteoartrite</h2>
+<p>Osteoartrose, mais corretamente chamada hoje de <strong>osteoartrite</strong>, não é apenas “cartilagem gasta”. É uma doença da articulação inteira: cartilagem, osso subcondral, sinóvia, cápsula, ligamentos e musculatura periarticular. O Tratado discute que o envelhecimento da cartilagem envolve enrijecimento da rede colágena, alterações nos proteoglicanos/agrecano e menor capacidade proliferativa dos condrócitos. Condrócito é a célula que mantém a matriz cartilaginosa; quando envelhece, responde pior ao estresse mecânico e repara menos.</p>
+<p>A cartilagem normal distribui carga e permite deslizamento. Com envelhecimento e sobrecarga, ela perde qualidade biomecânica. A matriz fica menos hidratada e menos eficiente para absorver impacto. Microlesões ativam condrócitos e sinóvia, gerando mediadores inflamatórios locais e enzimas degradativas. O osso subcondral responde com esclerose e formação de osteófitos. Por isso a osteoartrite causa dor mecânica, crepitação, rigidez curta e limitação funcional.</p>
+<h3>Quadro clínico típico</h3>
+<p>A dor é pior com uso e melhora com repouso; rigidez matinal costuma durar menos de 30 minutos; há crepitação, redução de amplitude e deformidade em fases avançadas. Joelho, quadril, mãos, coluna cervical e lombar são sítios comuns. Em mãos, interfalângicas distais podem formar nódulos de Heberden; proximais, nódulos de Bouchard. Se houver rigidez prolongada, calor importante, edema inflamatório intenso ou sintomas sistêmicos, pensar em artrite inflamatória, cristalopatias ou infecção.</p>
+<h3>Exames</h3>
+<p>O diagnóstico é clínico-radiográfico. Radiografia simples em carga, quando possível, mostra redução assimétrica do espaço articular, osteófitos, esclerose subcondral e cistos subcondrais. Ressonância raramente é necessária no início, mas pode ajudar se dor desproporcional, suspeita de necrose avascular, lesão meniscal complexa, fratura subcondral ou diagnóstico incerto. Exames laboratoriais não confirmam osteoartrite; servem para excluir diagnósticos diferenciais quando o padrão é inflamatório.</p>
+<h3>Conduta médica</h3>
+<p>A base é educação, perda ponderal se sobrepeso, exercício terapêutico, fortalecimento muscular, treino de equilíbrio, fisioterapia, órteses/bengala quando indicado e analgesia segura. Paracetamol pode ser tentado, mas tem eficácia limitada. AINE tópico é boa opção em mãos/joelhos; AINE oral exige cuidado com rim, PA, estômago e risco cardiovascular. Infiltração com corticosteroide pode ser útil em exacerbação dolorosa com sinovite. Encaminhar para ortopedia quando há dor refratária, deformidade importante, perda funcional grave ou indicação de artroplastia.</p>
+<div class="flow">Envelhecimento cartilaginoso aumenta vulnerabilidade; osteoartrite aparece quando vulnerabilidade + carga mecânica + inflamação local + falha reparativa ultrapassam a capacidade adaptativa articular.</div>
+</section>
+
+<section class="card searchable" id="pele">
+<h2>10. Pele e sistema tegumentar</h2>
+<p>A pele envelhece por fatores intrínsecos e extrínsecos. O envelhecimento intrínseco envolve redução da renovação epidérmica, achatamento da junção dermoepidérmica, queda de colágeno e elastina, menor vascularização, menor atividade de glândulas sebáceas e sudoríparas e redução de melanócitos funcionais. O fotoenvelhecimento, principalmente por radiação ultravioleta, acelera rugas profundas, elastose, manchas e lesões pré-neoplásicas.</p>
+<p>Clinicamente, a pele fica mais fina, seca, frágil e suscetível a fissuras, prurido, equimoses e lesões por pressão. A cicatrização fica mais lenta porque há menor resposta inflamatória, menor proliferação celular e pior vascularização local. A termorregulação também piora, aumentando risco de hipotermia e hipertermia.</p>
+<h3>Quando é patológico</h3>
+<p>Úlcera por pressão, ferida que não cicatriza, celulite recorrente, prurido intenso generalizado, lesão pigmentada assimétrica, queratoses múltiplas, sangramento, dor ou crescimento rápido de lesão cutânea exigem investigação. Não é normal “pele abrir” só porque é idoso; quase sempre há pressão, cisalhamento, má nutrição, incontinência, diabetes, doença vascular ou cuidado inadequado.</p>
+<h3>Exames e conduta</h3>
+<p>O exame clínico da pele deve ser completo, incluindo pés, região sacral e áreas de pressão. Dermatoscopia e biópsia são indicadas em lesões suspeitas. Conduta: hidratação cutânea, fotoproteção, manejo de xerose/prurido, mudança de decúbito, colchão adequado, avaliação nutricional, controle glicêmico, tratamento de infecções e cuidado com curativos. Em úlcera, avaliar perfusão arterial e retorno venoso; ferida não é só “pomadinha”, é diagnóstico sistêmico aparecendo na pele.</p>
+</section>
+
+<section class="card searchable" id="sentidos">
+<h2>11. Órgãos dos sentidos</h2>
+<p>As alterações sensoriais têm impacto gigantesco na funcionalidade. Visão e audição não são “detalhes”; elas sustentam marcha, comunicação, cognição e prevenção de delirium. No olho, envelhecimento favorece presbiopia, catarata, olho seco, redução de adaptação ao escuro e maior prevalência de glaucoma, degeneração macular e retinopatia diabética. No ouvido, presbiacusia compromete principalmente frequências altas e discriminação de fala, especialmente em ambiente ruidoso.</p>
+<p>O sistema vestibular e a propriocepção também declinam. Isso piora equilíbrio e aumenta dependência da visão para se orientar. Se o idoso enxerga mal, ouve mal e usa sedativo, a queda está praticamente fazendo inscrição no vestibular.</p>
+<h3>Quando é patológico</h3>
+<p>Perda visual súbita, dor ocular, halos, cefaleia, campo visual reduzido, diplopia, zumbido unilateral, vertigem intensa, perda auditiva assimétrica ou impacto funcional importante exigem avaliação. Perda sensorial também pode simular declínio cognitivo: o paciente não responde porque não ouviu, não porque “está demente”.</p>
+<h3>Exames e conduta</h3>
+<p>Triagem com acuidade visual, avaliação oftalmológica periódica, tonometria quando risco de glaucoma, fundoscopia em diabetes/hipertensão e audiometria quando queixa auditiva ou isolamento social. Conduta: corrigir óculos, tratar catarata quando funcionalmente relevante, aparelhos auditivos, adaptar ambiente, boa iluminação, retirar obstáculos e garantir uso de próteses sensoriais em internação para prevenir delirium.</p>
+</section>
+
+<section class="card searchable" id="imune">
+<h2>12. Sistema imune e hematopoético</h2>
+<p>O envelhecimento imune, chamado imunossenescência, não é simples “imunidade baixa”. É uma remodelação: queda da resposta adaptativa, menor produção/funcionalidade de linfócitos T virgens, resposta vacinal menos robusta e simultâneo estado pró-inflamatório crônico de baixo grau, muitas vezes chamado inflammaging. Isso ajuda a explicar maior suscetibilidade a infecções, apresentações clínicas atípicas e pior recuperação.</p>
+<p>Febre pode faltar em infecção grave. Pneumonia, ITU e sepse podem aparecer como delirium, queda, anorexia, fraqueza ou declínio funcional. No sistema hematopoético, anemia não deve ser considerada normal do envelhecimento. Ela pode decorrer de deficiência de ferro/B12/folato, doença renal, inflamação crônica, neoplasia, sangramento oculto ou doença medular.</p>
+<h3>Exames e conduta</h3>
+<p>Diante de suspeita infecciosa, valorizar sinais sutis: taquipneia, hipotensão, queda de saturação, delirium e redução funcional. Exames: hemograma, PCR conforme contexto, função renal, eletrólitos, urina, culturas quando indicado, radiografia de tórax e lactato se sepse. Para anemia: hemograma com índices, reticulócitos, ferritina/saturação de transferrina, B12, folato, creatinina, pesquisa de sangue oculto/colonoscopia conforme suspeita.</p>
+<p>Conduta: vacinação, diagnóstico precoce de infecção, antibiótico quando indicação clara, evitar tratar bacteriúria assintomática sem critério, rastrear causas de anemia e otimizar nutrição. O idoso pode não gritar doença; muitas vezes ele sussurra por meio de queda funcional.</p>
+</section>
+
+<section class="card searchable" id="reprodutor">
+<h2>13. Sistema reprodutor e geniturinário</h2>
+<p>Na mulher, a queda estrogênica pós-menopausa leva a atrofia urogenital: mucosa vaginal mais fina, menos lubrificação, pH mais elevado, maior predisposição a dispareunia, sintomas urinários e infecções recorrentes. No homem, há maior prevalência de hiperplasia prostática benigna, sintomas urinários obstrutivos e disfunção erétil, frequentemente ligada também a doença vascular, diabetes, fármacos e hipogonadismo.</p>
+<p>Sexualidade continua existindo no envelhecimento. O erro médico é ignorar isso. Queixa sexual pode sinalizar depressão, dor, atrofia vaginal, doença cardiovascular, efeito medicamentoso ou conflito psicossocial.</p>
+<h3>Quando é patológico</h3>
+<p>Sangramento pós-menopausa é patológico até prova em contrário. Infecção urinária recorrente, hematúria, retenção urinária, perda ponderal, dor pélvica, sintomas prostáticos graves, disfunção erétil súbita ou associada a claudicação/angina exigem investigação.</p>
+<h3>Exames e conduta</h3>
+<p>Mulheres: exame ginecológico, urina/cultura quando sintomas, ultrassom transvaginal e avaliação endometrial em sangramento. Homens: IPSS para sintomas urinários, toque retal conforme contexto, PSA individualizado, urina, creatinina, ultrassom/resíduo pós-miccional em retenção ou complicações. Conduta: lubrificantes/hidratantes vaginais, estrogênio tópico quando indicado, tratar ITU sintomática, manejo de HPB com alfa-bloqueador/inibidor de 5-alfa-redutase conforme perfil, rever fármacos que pioram função sexual e encaminhar quando houver sinais de câncer ou obstrução complicada.</p>
+</section>
+
+<section class="card searchable" id="farmacos">
+<h2>14. Farmacologia do idoso: o sistema invisível que altera todos os outros</h2>
+<p>O Tratado enfatiza que alterações renais, hepáticas, corporais e cerebrais mudam a resposta a medicamentos. Farmacocinética é o que o corpo faz com o fármaco: absorção, distribuição, metabolismo e excreção. Farmacodinâmica é o que o fármaco faz no corpo: efeito no receptor e resposta clínica. No idoso, a água corporal e a massa magra caem, a gordura aumenta, a filtração renal reduz, o metabolismo hepático pode mudar e o cérebro fica mais sensível a sedativos.</p>
+<p>Isso faz com que doses usuais causem eventos adversos: hipotensão, queda, delirium, constipação, retenção urinária, sangramento, hipoglicemia, lesão renal e bradicardia. Medicamentos de risco incluem benzodiazepínicos, hipnóticos Z, anticolinérgicos, antidepressivos tricíclicos, opioides, anti-histamínicos sedativos, antipsicóticos, AINEs, sulfonilureias, digoxina e combinações anti-hipertensivas excessivas.</p>
+<h3>Conduta prática</h3>
+<p>Em toda consulta geriátrica, faça reconciliação medicamentosa: nome, dose, horário, indicação e quem prescreveu. Pergunte por fitoterápicos e automedicação. Ao iniciar remédio, use princípio “comece baixo, vá devagar, mas vá até a dose eficaz se necessário”. Ajuste dose por função renal, retire duplicidades, reduza anticolinérgicos, monitore sódio/potássio/creatinina quando usar diuréticos, IECA/BRA ou espironolactona, e evite prescrever sedativo para resolver problema social, dor ou higiene do sono mal manejada.</p>
+<div class="alert"><strong>Regra geriátrica de ouro:</strong> qualquer queda, delirium, anorexia, constipação, tontura, retenção urinária ou sonolência nova deve acionar revisão medicamentosa antes de culpar a idade.</div>
+</section>
+
+<section class="card searchable" id="resumo">
+<h2>15. Mapa mental final: quando a senescência vira doença</h2>
+<table>
+<thead><tr><th>Sistema</th><th>Alteração esperada</th><th>O que empurra para patológico</th><th>Exames-chave</th></tr></thead>
+<tbody>
+<tr><td>Nervoso</td><td>Lentificação, sono fragmentado, menor dupla tarefa</td><td>Delirium, demência, queda recorrente, sinal focal</td><td>MoCA/MEEM, labs, neuroimagem selecionada</td></tr>
+<tr><td>Cardiovascular</td><td>Rigidez arterial, pior diástole, menor resposta ao esforço</td><td>HAS sustentada, síncope, FA, IC, angina</td><td>PA ortostática, ECG, eco, Holter</td></tr>
+<tr><td>Respiratório</td><td>Menor elasticidade, tosse menos eficiente, menor reserva</td><td>Hipoxemia, dispneia progressiva, pneumonia, DPOC</td><td>Oximetria, RX, espirometria, gasometria</td></tr>
+<tr><td>Renal</td><td>Menor TFG e reserva tubular</td><td>Albuminúria, queda progressiva, LRA, distúrbios eletrolíticos</td><td>eTFG, EAS, ACR, eletrólitos, USG</td></tr>
+<tr><td>Digestório</td><td>Motilidade mais lenta e menor reserva secretória</td><td>Disfagia, anemia, perda ponderal, sangramento</td><td>EDA, colonoscopia, labs, imagem</td></tr>
+<tr><td>Endócrino</td><td>Alteração de eixos hormonais e composição corporal</td><td>DM descompensado, tireoidopatia, osteoporose, hipoglicemia</td><td>HbA1c, TSH/T4L, Vit D, cálcio, DEXA</td></tr>
+<tr><td>Musculoesquelético</td><td>Osteopenia, sarcopenia, menor força</td><td>Fratura, fragilidade, dor incapacitante, osteoartrite avançada</td><td>DEXA, RX, FRAX, testes funcionais</td></tr>
+<tr><td>Pele</td><td>Atrofia, xerose, cicatrização lenta</td><td>Úlcera, infecção, lesão suspeita, ferida crônica</td><td>Exame pele, dermatoscopia/biópsia, avaliação vascular</td></tr>
+<tr><td>Sentidos</td><td>Presbiopia, catarata, presbiacusia</td><td>Perda funcional, queda, isolamento, delirium</td><td>Acuidade, oftalmo, audiometria</td></tr>
+<tr><td>Imune</td><td>Imunossenescência e inflamação basal</td><td>Infecção atípica, sepse, anemia não explicada</td><td>Hemograma, culturas, RX, urina, investigação anemia</td></tr>
+</tbody>
+</table>
+<div class="flow">A pergunta clínica nunca é só “isso acontece no idoso?”. A pergunta certa é: <strong>isso preserva função e estabilidade?</strong> Se perde autonomia, progride, causa sintoma, gera lesão ou aparece de forma aguda, deixou de ser apenas senescência.</div>
+<p class="quote"><strong>Fonte-base:</strong> Freitas EV et al. <em>Tratado de Geriatria e Gerontologia</em>, 3ª edição. Conteúdo elaborado por síntese e paráfrase dos capítulos sobre envelhecimento dos sistemas, cardiogeriatria, sistema nervoso, sistema digestório, endócrino, osteoarticular, renal, sono, delirium, farmacologia e avaliação clínica do idoso.</p>
+</section>
+</main>
+<footer class="footer">Feito para revisão médica: linguagem técnica com explicação clínica. Para uso acadêmico, complemente com leitura direta dos capítulos do Tratado e discussão com professor/preceptor.</footer>
+<script>
+function expandAll(){ document.querySelectorAll('.hidden').forEach(e=>e.classList.remove('hidden')); }
+const input=document.getElementById('search');
+input.addEventListener('input',()=>{
+ const q=input.value.trim().toLowerCase();
+ document.querySelectorAll('.searchable').forEach(sec=>{
+   sec.classList.toggle('hidden', q && !sec.innerText.toLowerCase().includes(q));
+ });
+});
+</script>
+</body>
+</html>
